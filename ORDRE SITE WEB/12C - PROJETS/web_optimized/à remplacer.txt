@@ -1,0 +1,355 @@
+C:\USERS\FLOWUP\DESKTOP\NOUVEAU DOSSIER\SITE INTERNET\ORDRE SITE WEB\12C - PROJETS\WEB_OPTIMIZED
+├───1_GEOMATIQUE
+│   ├───2025_CAD-ROADS-AREA MEASUREMENT
+│   │       0.webp
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       5.webp
+│   │
+│   ├───2025_GEOGRAPHIC INFORMATION SYSTEM (GIS)
+│   │       1.webp
+│   │       10.webp
+│   │       11.chaine de traitement.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2025_GEOMARKETING
+│   │       1.webp
+│   │       10.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2025_SPATIAL ANALYSIS
+│   │       0.webp
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │
+│   ├───2025_SPATIAL DATA INFRASTRUCTURE AND DATABASE
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │
+│   ├───2026_EDUCATIONAL MOBILE APPLICATION FOR GEODESY
+│   │       0.webp
+│   │       01.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │
+│   └───2026_REMOTE SENSING
+│           0.webp
+│           1.webp
+│           10.webp
+│           11.webp
+│           2.webp
+│           3.webp
+│           4.webp
+│           5.webp
+│           6.webp
+│           7.webp
+│           8.webp
+│           9.webp
+│
+├───2_SURVEY
+│   ├───2022_RESERVE NIBIISCHII – CENSUS
+│   │       1.webp
+│   │       10.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2023_NAVVIS VLX - SLAM
+│   │       0.webp
+│   │       01.webp
+│   │       1.webp
+│   │       10.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2023_REAL ESTATE AND VIRTUAL TOURS
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │
+│   ├───2023_STATIONARY SCANNING
+│   │       0.webp
+│   │       1.webp
+│   │
+│   ├───2024_PARTY WALL REPORT
+│   │       1.webp
+│   │
+│   ├───2025_3D DATA ACQUISITION AND PROCESSING (WITH SMARTPHONES)
+│   │       0.webp
+│   │       1.webp
+│   │       10.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2025_REAL-TIME KINEMATIC (RTK)
+│   │       1.webp
+│   │       10.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   └───2026_TOPOGRAPHIC SURVEYING
+│           1.webp
+│           2.webp
+│           3.webp
+│           4.gisement.webp
+│           5.webp
+│           6. excel.webp
+│           7.webp
+│
+├───3_ARCHITECTURE
+│   ├───2018_DRAWINGS
+│   │       1.webp
+│   │       2.webp
+│   │
+│   ├───2018_POTTERY, ART, AND FORMS
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │
+│   ├───2019_SCHOOL CONSTRUCTION IN TOGO
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │
+│   ├───2020_COLLECTIVE HOUSING – SLAB-TYPE BUILDING PROJECT – BRUSSELS – REHABILITATION AND RESTRUCTURING
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │
+│   ├───2020_SINGLE-FAMILY HOUSING – HOUSE PROJECT IN TOURNAI
+│   │       1.webp
+│   │       10.webp
+│   │       11.webp
+│   │       2.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2022_STUDY FOR AN OPEN-AIR CINEMA SCREEN
+│   │       0.webp
+│   │       1.webp
+│   │
+│   ├───2023_SINGLE-FAMILY HOUSE – ZAVENTEM
+│   │       1.webp
+│   │       2.webp
+│   │
+│   ├───2025_COMMERCIAL BUILDING AND 3D SCAN – BRUSSELS – BIM MODEL
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │
+│   └───2026_SINGLE-FAMILY HOUSING – HOUSE IN BRUSSELS – PLANS+SCAN+BIM
+│           1.webp
+│           2.webp
+│
+├───4_VIDEO
+│   ├───2020_ART ANIMATION
+│   │       1.webp
+│   │       2.webp
+│   │
+│   ├───2022_CRASSIERS
+│   │       1.webp
+│   │
+│   ├───2022_LES COULISSES DE L'HISTORIAL
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │
+│   ├───2023_LE CIMETIERE MARIN
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │
+│   └───2024_MAGNOLIA
+│           1.webp
+│
+├───5_MUSEE
+│   ├───2021_QUEIXOPERRA MUSEUM
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │
+│   ├───2022_ SCAVENGER HUNT – MYSMARTJOURNEY
+│   │       1.webp
+│   │       2.webp
+│   │       3.webp
+│   │       4.webp
+│   │
+│   ├───2022_COMIC STRIP – CHATRLIE
+│   │       0.webp
+│   │       1.webp
+│   │       10.webp
+│   │       11.webp
+│   │       12.webp
+│   │       13.webp
+│   │       14.webp
+│   │       15.webp
+│   │       16.webp
+│   │       17.webp
+│   │       18.webp
+│   │       19.webp
+│   │       2.webp
+│   │       20.webp
+│   │       3.webp
+│   │       4.webp
+│   │       5.webp
+│   │       6.webp
+│   │       7.webp
+│   │       8.webp
+│   │       9.webp
+│   │
+│   ├───2022_FURNITURE ARRANGEMENT
+│   │       1.webp
+│   │       2.webp
+│   │
+│   ├───2022_MUSEUM GUIDE AND LECTURER
+│   │       0.webp
+│   │       1.webp
+│   │       3.webp
+│   │
+│   └───2022_PASSAGES INSOLITES
+│           1.webp
+│           2.webp
+│           3.webp
+│           4.webp
+│           5.webp
+│
+└───6_RECHERCHE
+    ├───2022_ARTICLE ON THE HOUSE AT CÔTE-DE-BEAUPRÉ
+    │       1.webp
+    │
+    ├───2022_RESEARCH ON EUROPEAN IDENTITY
+    │       0.webp
+    │       1.webp
+    │       2.webp
+    │       3.webp
+    │       4.webp
+    │       5.webp
+    │       6.webp
+    │       7.webp
+    │
+    └───2026_THESIS ON 3D MODEL FEATURE EXTRACTATIONS
+            1.principe.webp
+            2.webp
+            3.webp
+            4.webp
+            5.webp
+            6.webp
+            7.webp
+
+
+
+
+
+C:\USERS\FLOWUP\DESKTOP\NOUVEAU DOSSIER\SITE INTERNET\ORDRE SITE WEB\WEB_OPTIMIZED
+
+    0- fixe homme - Copie.webp
+
+    1-salut 1- bande centrale touche.webm
+
+    10-bureau.webp
+
+    11A- bureau parcours personnel et pro.webp
+
+    11B- bureau competences et capacités - langues et informatiques .webp
+
+    11C - bureau projets dejà faits.webp
+
+    12A -continents et couleur.webp
+
+    13 transition video bureau tel.webm
+
+    14 tel.webp
+
+    15 tel couleur.webp
+
+    2- fixe homme.webp
+
+    3-salut 2 -bande centrale touche.webm
+
+    4-info cv qui suis je - fixe.webp
+
+    4_httpsyoutu.beylyz8cUSEqwsi=ukxbADYTZT6bVYzu.webp
+
+    5.dehors - scroll.webm
+
+    6-info cherche un job et viens pousser les portes.webp
+
+    7.church - scroll.webm
+
+    8- job dans le domaine de la geomatique le patrimoine matériel et immatériel.webp
+
+    9.bureau - scroll.webm
