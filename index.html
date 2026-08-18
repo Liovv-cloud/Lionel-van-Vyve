@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lionel van Vyve — Portfolio & Geomatics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2.7">
+</head>
+
+<body data-lang="en">
+
+  <!-- ÉCRAN FIXE PERMANENT -->
+  <div class="fixed-viewport">
+    <div class="media-stage">
+
+      <!-- BANDEAUX DE FONDU DU FOND -->
+      <div class="white-vignette"></div>
+      <div class="white-vignette--strong hidden" id="strongVignette"></div>
+      <div class="white-vignette--mobile hidden" id="mobileVignette"></div>
+
+      <!-- BOUTON SKIP INTRO -->
+      <button id="skipIntroBtn" class="skip-btn">
+        <span class="lang-en">Skip intro ➔</span>
+        <span class="lang-fr">Passer l'intro ➔</span>
+        <span class="lang-nl">Intro overslaan ➔</span>
+      </button>
+
+      <!-- BARRE DE NAVIGATION PERSISTANTE
+           Apparaît dès l'image 4 (fin d'intro) et reste visible tout le reste
+           du scroll : choix de langue toujours accessible + accès direct au
+           bureau (10-bureau.png) sans devoir re-scroller les vidéos 5/7/9. -->
+      <div class="site-nav hidden" id="siteNav">
+        <div class="scroll-mode-notice hidden" id="scrollNotice">
+          <span class="lang-en">↓ Scroll</span>
+          <span class="lang-fr">↓ Scrollez</span>
+          <span class="lang-nl">↓ Scroll</span>
+        </div>
+        <div class="lang-switcher site-nav__langs">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="nl">NL</button>
+        </div>
+        <button id="soundToggleBtn" class="site-nav__sound" aria-pressed="true" title="Son d'ambiance">🔊</button>
+        <button id="jumpToBureauBtn" class="site-nav__jump">
+          <span class="lang-en">Skip to info ➔</span>
+          <span class="lang-fr">Aller aux infos ➔</span>
+          <span class="lang-nl">Naar info ➔</span>
+        </button>
+      </div>
+
+      <!-- SLIDE INTRO (0 à 4) -->
+      <div class="stage-slide active" id="slide-intro">
+        <!-- 0. Image départ (version téléphone en dessous de 768px, sinon version ordi) -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="ORDRE%20SITE%20WEB/WEB_OPTIMIZED/0-%20tel.webp?v=20260818v3">
+          <img id="img0" class="media-item" src="ORDRE SITE WEB/WEB_OPTIMIZED/0- fixe homme - Copie.webp?v=20260818v3"
+            alt="Lionel van Vyve">
+        </picture>
+
+        <!-- 1. Vidéo 1 (salut 1) -->
+        <video id="video1" class="media-item hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/1-salut 1- bande centrale touche.webm?v=20260818v3" playsinline preload="auto"></video>
+
+        <!-- 2. Image 2 -->
+        <img id="img2" class="media-item hidden" src="ORDRE SITE WEB/WEB_OPTIMIZED/2- fixe homme.webp?v=20260818v3"
+          alt="Lionel van Vyve">
+
+        <!-- 3. Vidéo 3 (salut 2) -->
+        <video id="video3" class="media-item hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/3-salut 2 -bande centrale touche.webm?v=20260818v3" playsinline preload="auto"></video>
+
+        <!-- 4. IMAGE 4 (Fixe CV & Présentation) -->
+        <img id="img4" class="media-item hidden" src="ORDRE SITE WEB/WEB_OPTIMIZED/4-info cv qui suis je - fixe.webp?v=20260818v3"
+          alt="Qui suis-je">
+
+        <!-- CONTENU DESSINÉ CENTRÉ SUR IMAGE 4 -->
+        <div class="info-overlay hidden" id="info4">
+          <div class="info-card info-card--intro">
+
+            <h1 class="info-name">Lionel van Vyve</h1>
+            <p class="info-subtitle">
+              <span class="lang-en">Geomatics | Architectural Analysis | Mediation of Intangible Heritage</span>
+              <span class="lang-fr">Géomatique | Analyse Architecturale | Médiation du Patrimoine Immatériel</span>
+              <span class="lang-nl">Geomatica | Architecturale Analyse | Bemiddeling van Immaterieel Erfgoed</span>
+            </p>
+            <div class="info-location">
+              <span class="lang-en"><span class="mobile-hide">📍 Brussels Metropolitan Area &nbsp;•&nbsp; </span><a class="info-location-link"
+                  href="https://youtu.be/ylyz8cUSEqw?si=VwyAmEgHV22v0BLD" target="_blank" rel="noopener">🏆 Vocatio
+                  Laureate 2025</a></span>
+              <span class="lang-fr"><span class="mobile-hide">📍 Région de Bruxelles-Capitale &nbsp;•&nbsp; </span><a class="info-location-link"
+                  href="https://youtu.be/ylyz8cUSEqw?si=VwyAmEgHV22v0BLD" target="_blank" rel="noopener">🏆 Lauréat
+                  Vocatio 2025</a></span>
+              <span class="lang-nl"><span class="mobile-hide">📍 Brussels Hoofdstedelijk Gewest &nbsp;•&nbsp; </span><a class="info-location-link"
+                  href="https://youtu.be/ylyz8cUSEqw?si=VwyAmEgHV22v0BLD" target="_blank" rel="noopener">🏆 Vocatio
+                  Laureaat 2025</a></span>
+            </div>
+
+            <div class="tab-body">
+              <p class="lang-en">I am a curious, dynamic, creative, and sociable person. <span class="mobile-hide">I love learning, seeing, and
+                understanding. </span>Always ready to take on new challenges.<span class="mobile-hide"> I have a strong passion for art, architecture,
+                cinema, design... Everything related to heritage.</span></p>
+              <p class="lang-fr">Je suis une personne curieuse, dynamique, créative et sociable. <span class="mobile-hide">J’aime apprendre, voir
+                et comprendre. </span>Je suis toujours partant pour relever de nouveaux défis.<span class="mobile-hide"> J’aime l'art, l'architecture, le
+                cinéma, le design... Tout ce qui touche au patrimoine.</span></p>
+              <p class="lang-nl">Ik ben een nieuwsgierig, dynamisch, creatief en sociaal persoon. <span class="mobile-hide">Ik hou van leren, zien
+                en begrijpen. </span>Altijd in voor nieuwe uitdagingen.<span class="mobile-hide"> Ik heb een passie voor kunst, architectuur, film,
+                design... Alles wat met erfgoed te maken heeft.</span></p>
+            </div>
+
+            <div class="info-contacts mobile-hide">
+              <a href="mailto:lionelvvpro@gmail.com">✉️ lionelvvpro@gmail.com</a>
+              <a href="https://www.linkedin.com/in/lionel-vanvyve-40168a161" target="_blank">🔗 LinkedIn</a>
+              <a href="https://www.instagram.com/map_ane/" target="_blank">📸 Instagram</a>
+            </div>
+
+            <button id="restartIntroBtn" class="restart-intro-btn">
+              <span class="lang-en">⟲ Restart introduction</span>
+              <span class="lang-fr">⟲ Revoir l'introduction</span>
+              <span class="lang-nl">⟲ Introductie herbekijken</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ZONE DE CLIC PERSONNAGE -->
+        <div class="character-click-zone" id="charClickZone">
+          <!-- Icône main qui "tape" l'écran (remplace l'ancienne icône souris) -->
+          <div class="click-hint click-hint--hand" id="clickHint" aria-hidden="true">
+            <svg class="click-hint-svg click-hint-svg--hand" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                <path d="M3032 4509 c-52 -10 -132 -50 -185 -91 -49 -39 -114 -138 -130 -196
+-10 -37 -14 -42 -32 -37 -11 4 -51 14 -90 23 -195 42 -407 -78 -474 -269 -10
+-27 -20 -51 -22 -54 -3 -2 -27 3 -54 11 -77 23 -192 21 -268 -6 -116 -41 -217
+-137 -254 -240 l-18 -50 -350 348 c-286 284 -360 353 -406 374 -256 123 -546
+-19 -606 -296 -14 -66 -15 -88 -5 -147 26 -150 -7 -113 895 -1016 528 -529
+816 -824 806 -827 -8 -3 -176 -43 -374 -90 -406 -97 -452 -115 -534 -201 -125
+-132 -153 -319 -73 -483 34 -71 113 -152 181 -186 39 -20 300 -84 988 -242
+514 -118 967 -219 1007 -225 226 -36 504 39 701 189 121 91 1030 1010 1089
+1099 62 96 103 188 134 303 20 79 25 118 25 230 1 208 -47 369 -157 534 -77
+115 -1436 1472 -1511 1509 -88 43 -185 56 -283 36z m183 -225 c17 -8 343 -328
+726 -712 752 -755 742 -743 796 -907 35 -108 43 -279 18 -392 -19 -87 -66
+-196 -116 -270 -36 -54 -873 -900 -987 -998 -165 -143 -386 -213 -580 -185
+-41 5 -261 53 -490 106 -230 52 -642 147 -917 210 -560 128 -570 132 -614 218
+-57 111 -8 248 105 294 16 7 238 62 494 123 283 67 472 117 484 127 28 25 46
+75 38 106 -5 17 -331 350 -899 919 -627 627 -897 903 -908 929 -32 77 -15 177
+39 236 54 60 161 81 242 47 28 -11 263 -239 859 -835 820 -820 820 -820 861
+-820 74 0 122 64 102 135 -5 20 -128 150 -377 400 -367 368 -369 370 -381 425
+-28 129 57 247 184 258 103 8 100 11 496 -383 201 -200 375 -368 387 -374 71
+-36 164 34 149 112 -5 23 -78 103 -296 323 -183 184 -296 305 -305 328 -8 19
+-15 60 -15 89 0 112 79 197 189 205 107 8 108 7 431 -313 162 -161 305 -296
+318 -300 74 -22 150 60 127 137 -4 12 -105 122 -225 243 -229 232 -240 246
+-240 336 0 47 44 133 82 160 67 48 152 57 223 23z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE SCROLL 1 : Vidéo 5 -> Image 6 (PAUSE D'INFOS CHERCHE JOB) -->
+      <div class="stage-slide" id="slide-scroll-1">
+        <video id="video5" class="media-item" src="ORDRE SITE WEB/WEB_OPTIMIZED/5.dehors - scroll.webm?v=20260818v3" playsinline
+          preload="auto"></video>
+        <img id="img6" class="media-item hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/6-info cherche un job et viens pousser les portes.webp?v=20260818v3"
+          alt="Recherche de Job">
+
+        <div class="info-overlay hidden" id="info6">
+          <div class="info-card info-card--job">
+            <span class="info-badge">
+              <span class="lang-en">★ Job Seeking ★</span>
+              <span class="lang-fr">★ Recherche de Job ★</span>
+              <span class="lang-nl">★ Op zoek naar werk ★</span>
+            </span>
+            <h2 class="info-title">
+              <span class="lang-en">Let's open doors together!</span>
+              <span class="lang-fr">Poussons les portes ensemble !</span>
+              <span class="lang-nl">Laten we samen deuren openen!</span>
+            </h2>
+            <p class="info-desc">
+              <span class="lang-en">Open to anything related to <strong>project management</strong> (heritage-related
+                or not), <strong>geomatics</strong> and <strong>land surveying</strong>, <strong>architecture</strong>,
+                as well as <strong>research</strong> and <strong>analysis</strong>.</span>
+              <span class="lang-fr">Ouvert à tout ce qui touche au <strong>management de projet</strong> (patrimoniaux
+                ou non), à la <strong>géomatique</strong> et au métier de <strong>géomètre expert</strong>, à
+                l'<strong>architecture</strong>, ainsi qu'à la <strong>recherche</strong> et à
+                l'<strong>analyse</strong>.</span>
+              <span class="lang-nl">Open voor alles wat te maken heeft met <strong>projectmanagement</strong> (al dan
+                niet erfgoedgerelateerd), <strong>geomatica</strong> en <strong>landmeetkunde</strong>,
+                <strong>architectuur</strong>, en <strong>onderzoek</strong> en <strong>analyse</strong>.</span>
+            </p>
+            <div class="info-contacts mobile-hide">
+              <a href="mailto:lionelvvpro@gmail.com">✉️ lionelvvpro@gmail.com</a>
+              <a href="tel:+32451083582">📞 +32 451 08 35 82</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE SCROLL 2 : Vidéo 7 -> Image 8 (PAUSE D'INFOS DOMAINE GÉOMATIQUE) -->
+      <div class="stage-slide" id="slide-scroll-2">
+        <video id="video7" class="media-item" src="ORDRE SITE WEB/WEB_OPTIMIZED/7.church - scroll.webm?v=20260818v3" playsinline
+          preload="auto"></video>
+        <img id="img8" class="media-item hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/8- job dans le domaine de la geomatique le patrimoine matériel et immatériel.webp?v=20260818v3"
+          alt="Domaine d'expertise">
+
+        <div class="info-overlay hidden" id="info8">
+          <div class="info-card info-card--domain">
+            <span class="info-badge">
+              <span class="lang-en">★ Domains & Expertise ★</span>
+              <span class="lang-fr">★ Domaines & Expertises ★</span>
+              <span class="lang-nl">★ Domeinen & Expertise ★</span>
+            </span>
+            <h2 class="info-title">
+              <span class="lang-en">Tangible & Intangible Heritage</span>
+              <span class="lang-fr">Patrimoine Matériel & Immatériel</span>
+              <span class="lang-nl">Materieel & Immaterieel Erfgoed</span>
+            </h2>
+            <p class="info-desc">
+              <span class="lang-en">🧩 Three complementary degrees, one common thread: understanding, documenting, and
+                valuing heritage — tangible and intangible.</span>
+              <span class="lang-fr">🧩 Trois formations complémentaires, un même fil conducteur : comprendre, documenter
+                et valoriser le patrimoine, matériel comme immatériel.</span>
+              <span class="lang-nl">🧩 Drie aanvullende opleidingen, één rode draad: erfgoed begrijpen, documenteren en
+                valoriseren — zowel materieel als immaterieel.</span>
+            </p>
+            <ul class="info-list">
+              <li>
+                <span class="lang-en">🇧🇪 <strong>Bachelor in Architecture</strong> (2016–2020)<br><small
+                    class="info-list-sub">Reading the city and its historical layers.<br>Designing with respect for the
+                    built heritage.<br>Restoring, transforming, transmitting.</small></span>
+                <span class="lang-fr">🇧🇪 <strong>Bachelier en architecture</strong> (2016–2020)<br><small
+                    class="info-list-sub">Lire la ville et ses strates historiques.<br>Concevoir dans le respect du bâti
+                    existant.<br>Restaurer, transformer, transmettre.</small></span>
+                <span class="lang-nl">🇧🇪 <strong>Bachelor architectuur</strong> (2016–2020)<br><small
+                    class="info-list-sub">De stad en haar historische lagen lezen.<br>Ontwerpen met respect voor het
+                    bestaande gebouwde erfgoed.<br>Restaureren, transformeren, doorgeven.</small></span>
+              </li>
+              <li>
+                <span class="lang-en">🇫🇷🇨🇦 <strong>Erasmus Mundus Master DYCLAM+</strong> (2020–2022)<br><small
+                    class="info-list-sub">Heritage, memory and resilience.<br>Cultural diplomacy and digital
+                    mediation.<br>Leading international projects for the intangible.</small></span>
+                <span class="lang-fr">🇫🇷🇨🇦 <strong>Master Erasmus Mundus DYCLAM+</strong> (2020–2022)<br><small
+                    class="info-list-sub">Patrimoines, mémoires et résilience.<br>Diplomatie culturelle et médiation
+                    numérique.<br>Porter des projets internationaux au service de l'immatériel.</small></span>
+                <span class="lang-nl">🇫🇷🇨🇦 <strong>Erasmus Mundus Master DYCLAM+</strong> (2020–2022)<br><small
+                    class="info-list-sub">Erfgoed, herinnering en veerkracht.<br>Culturele diplomatie en digitale
+                    bemiddeling.<br>Internationale projecten leiden ten dienste van het immateriële.</small></span>
+              </li>
+              <li>
+                <span class="lang-en">🇧🇪 <strong>Master in Geomatics & Surveying</strong> (2024–2026)<br><small
+                    class="info-list-sub">Measuring space with precision.<br>Scanning, modeling, mapping.<br>Giving
+                    heritage a scientific and legal memory.</small></span>
+                <span class="lang-fr">🇧🇪 <strong>Master en géomatique & géométrie</strong> (2024–2026)<br><small
+                    class="info-list-sub">Mesurer l'espace avec précision.<br>Scanner, modéliser,
+                    cartographier.<br>Donner au patrimoine une mémoire scientifique et juridique.</small></span>
+                <span class="lang-nl">🇧🇪 <strong>Master geomatica & landmeetkunde</strong> (2024–2026)<br><small
+                    class="info-list-sub">Ruimte meten met precisie.<br>Scannen, modelleren, in kaart
+                    brengen.<br>Erfgoed een wetenschappelijk en juridisch geheugen geven.</small></span>
+              </li>
+            </ul>
+            <p class="info-desc info-desc--thread">
+              <span class="lang-en"><strong>A common thread</strong> — Three approaches, one mission: understand,
+                document, value — and bring heritage to life.</span>
+              <span class="lang-fr"><strong>Un fil rouge</strong> — Trois approches, une même mission : comprendre,
+                documenter, valoriser — et faire vivre le patrimoine.</span>
+              <span class="lang-nl"><strong>Een rode draad</strong> — Drie benaderingen, één missie: begrijpen,
+                documenteren, valoriseren — en erfgoed tot leven brengen.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE SCROLL 3 : Vidéo 9 -> Image 10 (PAUSE INTERACTIVE BUREAU -> 11A, 11B, 11C) -->
+      <div class="stage-slide" id="slide-scroll-3">
+        <video id="video9" class="media-item" src="ORDRE SITE WEB/WEB_OPTIMIZED/9.bureau - scroll.webm?v=20260818v3" playsinline
+          preload="auto"></video>
+
+        <!-- IMAGE 10 DE BASE ET SES IMAGES SURVOLÉES (11A, 11B, 11C) -->
+        <img id="img10" class="media-item hidden" src="ORDRE SITE WEB/WEB_OPTIMIZED/10-bureau.webp?v=20260818v3"
+          alt="Parcours et Bureau">
+        <img id="img11A" class="media-item colored hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/11A- bureau parcours personnel et pro.webp?v=20260818v3" alt="Parcours Personnel et Pro">
+        <img id="img11B" class="media-item colored hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/11B- bureau competences et capacités - langues et informatiques .webp?v=20260818v3"
+          alt="Compétences et Langues">
+        <img id="img11C" class="media-item colored hidden"
+          src="ORDRE SITE WEB/WEB_OPTIMIZED/11C - bureau projets dejà faits.webp?v=20260818v3" alt="Projets déjà faits">
+
+        <!-- ZONES INTERACTIVES SUR L'IMAGE 10 BUREAU -->
+        <div class="bureau-interactive-layer hidden" id="bureauLayer">
+
+          <div class="hover-zone zone-11A-map" id="zone11A_map" title="Journey"></div>
+          <div class="hover-zone zone-11A-globe" id="zone11A_globe" title="Journey"></div>
+
+          <div class="hover-zone zone-11B-screen" id="zone11B_screen" title="Skills"></div>
+          <div class="hover-zone zone-11B-controls" id="zone11B_controls" title="Skills"></div>
+
+          <div class="hover-zone zone-11C-shelf" id="zone11C_shelf" title="Projects"></div>
+          <div class="hover-zone zone-11C-station" id="zone11C_station" title="Projects"></div>
+
+          <!-- Labels centrés exactement par rapport à l'image -->
+          <span class="bureau-label label-11A">
+            <span class="lang-en">Journey</span>
+            <span class="lang-fr">Parcours</span>
+            <span class="lang-nl">Achtergrond</span>
+          </span>
+          <span class="bureau-label label-11B">
+            <span class="lang-en">Skills</span>
+            <span class="lang-fr">Compétences</span>
+            <span class="lang-nl">Vaardigheden</span>
+          </span>
+          <span class="bureau-label label-11C">
+            <span class="lang-en">Projects</span>
+            <span class="lang-fr">Projets</span>
+            <span class="lang-nl">Projecten</span>
+          </span>
+
+        </div>
+      </div>
+
+      <!-- SLIDE SCROLL 4 : Vidéo 13 -> Image 14 (clic sur le téléphone) -> Image 15 (Contact final) -->
+      <div class="stage-slide" id="slide-scroll-4">
+        <video id="video13" class="media-item" src="ORDRE SITE WEB/WEB_OPTIMIZED/13 transition video bureau tel.webm?v=20260818v3"
+          playsinline preload="auto"></video>
+
+        <!-- 14. Plan fixe N&B du téléphone (à cliquer) -->
+        <img id="img14" class="media-item hidden" src="ORDRE SITE WEB/WEB_OPTIMIZED/14 tel.webp?v=20260818v3" alt="Contactez-moi">
+
+        <!-- Zone de clic sur l'écran du téléphone -->
+        <div class="tel-click-zone hidden" id="telClickZone">
+          <div class="tel-click-hint" id="telClickHint">
+            <span class="lang-en">Want to<br>get in touch?</span>
+            <span class="lang-fr">Envie de<br>me contacter ?</span>
+            <span class="lang-nl">Wil je<br>contact opnemen?</span>
+          </div>
+        </div>
+
+        <!-- 15. Plan couleur final avec les coordonnées de contact -->
+        <img id="img15" class="media-item colored hidden" src="ORDRE SITE WEB/WEB_OPTIMIZED/15 tel couleur.webp?v=20260818v3"
+          alt="Coordonnées de contact">
+
+        <div class="info-overlay hidden" id="info15">
+          <div class="info-card info-card--end">
+            <span class="info-badge">
+              <span class="lang-en">★ Let's talk ★</span>
+              <span class="lang-fr">★ Discutons ★</span>
+              <span class="lang-nl">★ Laten we praten ★</span>
+            </span>
+            <h2 class="info-title">
+              <span class="lang-en">Thanks for stopping by!</span>
+              <span class="lang-fr">Merci d'être passé !</span>
+              <span class="lang-nl">Bedankt voor je bezoek!</span>
+            </h2>
+            <p class="info-desc">
+              <span class="lang-en">Feel free to reach out — I'd love to hear from you.</span>
+              <span class="lang-fr">N'hésitez pas à me contacter — je serai ravi d'échanger avec vous.</span>
+              <span class="lang-nl">Aarzel niet om contact op te nemen — ik hoor graag van je.</span>
+            </p>
+            <div class="info-contacts">
+              <a href="mailto:lionelvvpro@gmail.com">✉️ lionelvvpro@gmail.com</a>
+              <a href="tel:+32451083582">📞 +32 451 08 35 82</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDICATEUR SCROLL VIDÉO — apparaît 5s après le début d'une vidéo 5/7/9 -->
+      <div id="videoScrollHint" class="video-scroll-hint" aria-hidden="true">
+        <span class="video-scroll-hint__text">
+          <span class="lang-en">scroll</span>
+          <span class="lang-fr">scroll</span>
+          <span class="lang-nl">scroll</span>
+        </span>
+        <svg class="video-scroll-hint__arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- BARRE DE NAVIGATION VERTICALE DES ÉTAPES (DROITE) -->
+      <nav id="stepNav" class="step-nav" aria-label="Navigation par étapes">
+        <ul class="step-nav__list">
+          <li class="step-nav__item active" data-step="0">
+            <button class="step-nav__btn" aria-label="Intro">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">Intro</span>
+                <span class="lang-fr">Intro</span>
+                <span class="lang-nl">Intro</span>
+              </span>
+            </button>
+          </li>
+          <li class="step-nav__item" data-step="1">
+            <button class="step-nav__btn" aria-label="Qui suis-je">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">About</span>
+                <span class="lang-fr">Qui</span>
+                <span class="lang-nl">Over mij</span>
+              </span>
+            </button>
+          </li>
+          <li class="step-nav__item" data-step="2">
+            <button class="step-nav__btn" aria-label="Portes">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">Opportunities</span>
+                <span class="lang-fr">Portes</span>
+                <span class="lang-nl">Kansen</span>
+              </span>
+            </button>
+          </li>
+          <li class="step-nav__item" data-step="3">
+            <button class="step-nav__btn" aria-label="Expertise">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">Expertise</span>
+                <span class="lang-fr">Expertise</span>
+                <span class="lang-nl">Expertise</span>
+              </span>
+            </button>
+          </li>
+          <li class="step-nav__item" data-step="4">
+            <button class="step-nav__btn" aria-label="Bureau">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">Desk</span>
+                <span class="lang-fr">Bureau</span>
+                <span class="lang-nl">Bureau</span>
+              </span>
+            </button>
+          </li>
+          <li class="step-nav__item" data-step="5">
+            <button class="step-nav__btn" aria-label="Contact">
+              <span class="step-nav__dot"></span>
+              <span class="step-nav__label">
+                <span class="lang-en">Contact</span>
+                <span class="lang-fr">Contact</span>
+                <span class="lang-nl">Contact</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PANEL JOURNEY — Globe Three.js + Ligne du temps
+       ═══════════════════════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════════════════════
+       PANEL JOURNEY — Globe Three.js + Ligne du temps
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="journey-overlay hidden" id="journeyOverlay" data-lenis-prevent="true">
+    <div class="journey-panel" data-lenis-prevent="true">
+
+      <!-- Bouton fermer -->
+      <button class="journey-close" id="journeyClose" aria-label="Close">✕</button>
+
+      <!-- Titre -->
+      <h2 class="journey-heading">
+        <span class="lang-en">My Journey</span>
+        <span class="lang-fr">Mon Parcours</span>
+        <span class="lang-nl">Mijn Achtergrond</span>
+      </h2>
+
+      <!-- Corps en deux colonnes -->
+      <div class="journey-body">
+
+        <!-- Colonne gauche : Timeline -->
+        <div class="journey-left" data-lenis-prevent="true">
+
+          <!-- Onglets de filtre par catégorie -->
+          <div class="journey-tabs" id="journeyTabs">
+            <button class="journey-tab active" data-cat="ALL">
+              <span class="lang-en">All</span>
+              <span class="lang-fr">Toutes</span>
+              <span class="lang-nl">Alle</span>
+            </button>
+            <button class="journey-tab" data-cat="VOLONTARIAT">
+              <span class="lang-en">Volunteering</span>
+              <span class="lang-fr">Volontariat</span>
+              <span class="lang-nl">Vrijwilligerswerk</span>
+            </button>
+            <button class="journey-tab" data-cat="PROFESSIONNEL">
+              <span class="lang-en">Professional</span>
+              <span class="lang-fr">Professionnel</span>
+              <span class="lang-nl">Professioneel</span>
+            </button>
+            <button class="journey-tab" data-cat="EDUCATION">
+              <span class="lang-en">Education</span>
+              <span class="lang-fr">Éducation</span>
+              <span class="lang-nl">Opleiding</span>
+            </button>
+          </div>
+
+          <div class="journey-timeline" id="journeyTimeline"></div>
+        </div>
+
+        <!-- Colonne droite : Globe -->
+        <div class="journey-right">
+          <div class="journey-globe-wrap">
+            <canvas id="journeyGlobe"></canvas>
+
+            <!-- TOOLTIP DE LISTE D'EXPÉRIENCES PAR LIEU (s'affiche au clic d'un point sur le globe) -->
+            <div id="globeTooltip" class="globe-tooltip hidden">
+              <button class="gtooltip-close" id="globeTooltipClose">✕</button>
+              <div class="gtooltip-header" id="globeTooltipHeader">📍 Bruxelles, Belgique</div>
+              <div class="gtooltip-body" id="globeTooltipBody">
+                <!-- Liens vers les expériences générés dynamiquement en JS -->
+              </div>
+            </div>
+
+            <p class="journey-globe-hint">
+              <span class="lang-en">← click a point on the globe to see experiences</span>
+              <span class="lang-fr">← cliquez sur un point du globe pour voir les expériences</span>
+              <span class="lang-nl">← klik op een punt op de wereldbol om ervaringen te zien</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PANEL SKILLS — Mock Device Responsive + Grille d'icônes
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="skills-overlay hidden" id="skillsOverlay" data-lenis-prevent="true">
+    <div class="skills-panel" data-lenis-prevent="true">
+
+      <!-- Bouton fermer -->
+      <button class="skills-close" id="skillsClose" aria-label="Close">✕</button>
+
+      <!-- Titre -->
+      <h2 class="skills-heading">
+        <span class="lang-en">Skills & Tools</span>
+        <span class="lang-fr">Compétences & Outils</span>
+        <span class="lang-nl">Vaardigheden & Tools</span>
+      </h2>
+
+      <!-- Device frame (écran ordi sur desktop, téléphone sur mobile) -->
+      <div class="skills-device" id="skillsDevice" data-lenis-prevent="true">
+
+        <!-- Écran d'accueil : grille de dossiers façon iOS -->
+        <div class="skills-screen skills-home" id="skillsScreen" data-lenis-prevent="true">
+          <!-- Généré dynamiquement par skills.js -->
+        </div>
+        <!-- Généré dynamiquement par skills.js -->
+      </div>
+
+      <!-- Vue "dossier ouvert" : générée dynamiquement par skills.js -->
+      <!-- (id="skillsFolderView", créée au premier openPanel() si absente) -->
+
+      <!-- Dock (mobile only) -->
+      <div class="skills-dock" id="skillsDock"></div>
+    </div>
+
+    <!-- Tooltip niveau étoiles -->
+    <div class="skills-tooltip hidden" id="skillsTooltip">
+      <button class="skills-tooltip-close" id="skillsTooltipClose">✕</button>
+      <div class="skills-tooltip-icon" id="skillsTooltipIcon"></div>
+      <div class="skills-tooltip-name" id="skillsTooltipName">App Name</div>
+      <div class="skills-tooltip-stars" id="skillsTooltipStars">
+        ★★★★☆
+      </div>
+      <div class="skills-tooltip-desc" id="skillsTooltipDesc"></div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="scroll-track" id="scrollTrack"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="js/scroll.js?v=20260818f"></script>
+  <script src="js/ambient-sound.js?v=20260818"></script>
+  <script src="js/video.js?v=20260818v6"></script>
+  <script src="js/journey.js?v=20260818e"></script>
+  <script src="js/skills.js?v=20260818d"></script>
+  <script src="js/projects-manifest.js?v=20260818b"></script>
+  <script src="js/projects.js?v=20260818e"></script>
+
+
+
+</body>
+
+</html>
