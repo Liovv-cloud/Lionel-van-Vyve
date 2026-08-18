@@ -1,0 +1,86 @@
+# ======================================================================
+#  SKILLS.TXT — Vos compétences et outils, modifiables directement ici
+# ======================================================================
+#  Une catégorie commence par une ligne "## NOM_FR | NOM_EN | NOM_NL | ICONE"
+#  Chaque outil est ensuite une ligne :
+#     NOM | NIVEAU | DESCRIPTION_FR | DESCRIPTION_EN | DESCRIPTION_NL
+#
+#  NIVEAU :
+#   - un chiffre de 1 à 5  -> affiché en étoiles (ex: 4)
+#   - un niveau CECRL (A1, A2, B1, B2, C1, C2) -> affiché comme badge de
+#     langue (utilisé uniquement dans la catégorie 8_LANGUES)
+#
+#  Les images sont prises automatiquement dans le sous-dossier de la
+#  catégorie, dans "ORDRE SITE WEB/12B- SKILLS (logo)/<NOM_FR>/", en
+#  cherchant un fichier nommé comme l'outil (NOM.png puis .jpg/.jpeg/.webp
+#  si .png n'existe pas). Si aucune image n'est trouvée, une pastille
+#  avec l'initiale du nom s'affiche à la place.
+#
+#  Pour AJOUTER un outil : ajoutez une ligne sous sa catégorie.
+#  Pour AJOUTER une catégorie : ajoutez un bloc "## ..." avec ses lignes,
+#  et créez le sous-dossier correspondant pour les images.
+#  Aucun script à relancer : sauvegardez et rafraîchissez la page du site
+#  (servie via lancer_serveur_local.bat).
+# ======================================================================
+
+## 1_CAD | 1_CAD | 1_CAD | 📐
+AUTOCAD | 5 | Dessin CAO 2D/3D et plans techniques | 2D/3D CAD drawing and technical plans | 2D/3D CAD-tekeningen en technische plannen
+FUSION 360 | 2 | Modélisation 3D et design industriel | 3D modeling and industrial design | 3D-modellering en industrieel ontwerp
+RECAP | 4 | Capture réalité depuis scans 3D | Reality capture from 3D scans | Reality capture van 3D-scans
+REVIT | 4 | Modélisation architecturale BIM | BIM architectural modeling | BIM architecturaal modelleren
+
+## 2_GEOGRAPHIE | 2_GEOGRAPHY | 2_GEOGRAFIE | 🌍
+GOOGLE EARTH PRO | 4 | Visualisation géospatiale et exploration | Geospatial visualization and exploration | Geospatiale visualisatie en verkenning
+QGIS | 4 | Cartographie SIG et analyse spatiale avancée | Advanced GIS mapping and spatial analysis | Geavanceerde GIS-mapping en ruimtelijke analyse
+RTKLIB | 3 | Post-traitement GNSS et positionnement RTK | GNSS post-processing and RTK positioning | GNSS naverwerking en RTK-positionering
+SNAP - Sentinel Application Platform | 3 | Traitement d'images satellites (Sentinel ESA) | Satellite imagery processing (Sentinel ESA) | Satellietbeeldverwerking (Sentinel ESA)
+
+## 3_DESIGN ET 3D | 3_DESIGN & 3D | 3_DESIGN EN 3D | ✏️
+ADOBE AFTER EFFECT | 2 | Motion graphics et effets visuels | Motion graphics and visual effects | Motion graphics en visuele effecten
+ADOBE ILLUSTRATOR | 3 | Illustration vectorielle et design de logo | Vector illustration and logo design | Vectorillustratie en logo-ontwerp
+ADOBE PHOTOSHOP | 4 | Retouche photo et design graphique | Photo retouching and graphic design | Fotobewerking en grafisch ontwerp
+ADOBE PREMIERE | 3 | Montage vidéo et post-production | Video editing and post-production | Videobewerking en nabewerking
+BLENDER | 3 | Modélisation 3D, animation et rendu | 3D modeling, animation and rendering | 3D-modellering, animatie en rendering
+CANVA | 5 | Design graphique pour présentations et réseaux sociaux | Graphic design for presentations and social media | Grafisch ontwerp voor presentaties en sociale media
+MADMAPPER | 2 | Vidéo mapping et art de la projection | Video mapping and projection art | Videomapping en projectiekunst
+SKETCHUP | 4 | Modélisation 3D architecturale et intérieure | 3D architectural and interior modeling | 3D architecturaal en interieurmodelleren
+
+## 4_ANALYSE et TRAITEMENT DE NUAGE DE POINTS ET MODELES 3D | 4_POINT CLOUD & 3D MODEL ANALYSIS | 4_PUNTENWOLK & 3D-MODELANALYSE | 🔺
+AGISOFT METASHAPE | 4 | Photogrammétrie et reconstruction 3D à partir d'images | Photogrammetry and 3D reconstruction from imagery | Fotogrammetrie en 3D-reconstructie uit beelden
+CLOUDCOMPARE | 4 | Traitement et comparaison de nuages de points 3D | 3D point cloud processing and comparison | 3D puntenwolkverwerking en vergelijking
+GIGAMESH | 3 | Analyse de maillages 3D pour l'archéologie et le patrimoine | 3D mesh analysis for archaeology and heritage | 3D mesh-analyse voor archeologie en erfgoed
+MESHLAB | 3 | Traitement et nettoyage de maillages 3D | 3D mesh processing and cleaning | 3D mesh verwerking en opschoning
+MESHROOM | 3 | Photogrammétrie et reconstruction 3D | Photogrammetry and 3D reconstruction | Fotogrammetrie en 3D-reconstructie
+NAVVIS IVION | 4 | Scan mobile SLAM et plateforme de gestion de nuages de points | Mobile SLAM scanning and point cloud management platform | Mobiele SLAM-scanning en puntenwolkbeheerplatform
+
+## 5_CODE | 5_CODE | 5_CODE | 💻
+COLAB | 3 | Notebooks Python pour la science des données et l'IA | Python notebooks for data science and AI | Python notebooks voor data science en AI
+GITHUB | 3 | Contrôle de version et développement collaboratif | Version control and collaborative development | Versiebeheer en collaboratieve ontwikkeling
+PostgreSQL | 2 | Gestion de bases de données relationnelles | Relational database management | Beheer van relationele databases
+R | 2 | Analyse statistique et science des données | Statistical analysis and data science | Statistische analyse en data science
+VISUAL STUDIO CODE | 4 | IDE principal — HTML, CSS, JS, Python | Primary IDE — HTML, CSS, JS, Python | Primaire IDE — HTML, CSS, JS, Python
+
+## 6_VISITE VIRTUELLE | 6_VIRTUAL TOUR | 6_VIRTUEEL BEZOEK | 🎡
+3DVISTA | 4 | Création de visites virtuelles panoramiques 360° | 360° panoramic virtual tour creation | 360° panoramische virtuele tourmakerij
+PANOTOUR | 4 | Création de visites virtuelles panoramiques 360° | 360° panoramic virtual tour creation | 360° panoramische virtuele tourmakerij
+
+## 7_SUITE BUREAUTIQUE | 7_OFFICE SUITE | 7_KANTOORSUITE | 📋
+MICROSOFT EXCEL | 4 | Tableurs, analyse de données et tableaux croisés | Spreadsheets, data analysis and pivot tables | Spreadsheets, gegevensanalyse en draaitabellen
+MICROSOFT POWER POINT | 5 | Présentations et conception de diapositives | Presentations and slide design | Presentaties en diaontwerp
+MICROSOFT WORD | 5 | Rédaction et mise en forme de documents | Document writing and formatting | Documentschrijven en opmaak
+
+## 8_LANGUES | 8_LANGUAGES | 8_TALEN | 🗣️
+FRANCAIS | C2 | Langue maternelle | Native language | Moedertaal
+NEDERLANDS | B2 | Utilisateur indépendant | Independent user | Onafhankelijke gebruiker
+ENGLISH | B2 | Utilisateur indépendant | Independent user | Onafhankelijke gebruiker
+PORTUGUÊS | A2 | Utilisateur élémentaire | Elementary user | Basisgebruiker
+
+## 9_ME CONTACTER | 9_CONTACT ME | 9_CONTACTEER MIJ | 📞
+GMAIL | 5 | Me contacter par email | Reach out by email | Neem contact op via e-mail
+TELEPHONE | 5 | Me contacter par téléphone | Reach out by phone | Neem telefonisch contact op
+LINKEDIN | 5 | Mon profil professionnel | My professional profile | Mijn professioneel profiel
+INSTAGRAM | 5 | Mon compte Instagram MAPANE | My MAPANE Instagram account | Mijn MAPANE Instagram-account
+
+## 10_DRIVE | 10_DRIVE | 10_RIJBEWIJS | 🚗
+DRIVER'S LICENSE | 5 | Permis B, conduite autonome | Driving licence B, independent driving | Rijbewijs B, zelfstandig rijden
+
